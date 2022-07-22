@@ -3,14 +3,14 @@
 .. image:: https://github.com/rubin-observatory/rtn-008/workflows/CI/badge.svg
    :target: https://github.com/rubin-observatory/rtn-008/actions/
 
-##########################################################################
-LSST Processing of Gravitational Wave TOO Data in the Early Operations Era
-##########################################################################
+#######################################################################################
+Rubin Observatory Processing of Gravitational Wave TOO Data in the Early Operations Era
+#######################################################################################
 
 RTN-008
 =======
 
-Since the watershed discovery of an electromagnetic counterpart to the LIGO gravitational wave source GW170817, multi-messenger astrophysics has emerged as a major area of strategic focus for the NSF. LSST’s depth, survey speed, and data management systems will make it a key asset in the search for EM counterparts. Exploiting this capability in the first year of LSST operations (GW observing run O4) may require special actions, however. We discuss potential approaches to data access, reference building, and special data processing.
+Since the watershed discovery of an electromagnetic counterpart to the LIGO gravitational wave source GW170817, multi-messenger astrophysics has emerged as a major area of strategic focus for the NSF. Rubin Observatory’s depth, survey speed, and data management systems will make it a key asset in the search for EM counterparts. Exploiting this capability in the first year of Rubin operations (GW observing run O4) may require special actions, however. We discuss potential approaches to data access, template building, and special data processing.
 
 Links
 =====
