@@ -82,7 +82,7 @@ However, Rubin is capable of making the definitive measurements, delivering high
 One challenge remains: the current timeline for future LIGO/Virgo/KAGRA observing runs (Figure \ref{fig:scenarios}) calls for observing run O4 to overlap only with the Rubin commissioning period\footnote{See \url{https://dmtn-232.lsst.io/top_milestones.html} for current estimates.}.
 In this period prior to the first LSST data release (DR1), alert production will not be running at full volume nor full fidelity.
 Moreover, after O4 there will be a long, two-year period of downtime (until 2026+) for upgrades to the GW interferometers.  
-Accordingly, there are high stakes for Rubin GW TOOs in O4 despite the technical challenges they present.
+Accordingly, O4 provides a key opportunity to commission Rubin's TOO capability as well as deliver important early science despite the technical challenges.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/LVK_run_plan_220615.png}
@@ -94,7 +94,7 @@ Accordingly, there are high stakes for Rubin GW TOOs in O4 despite the technical
 The Survey Cadence Optimization Committee (SCOC\footnote{\url{https://www.lsst.org/content/charge-survey-cadence-optimization-committee-scoc}}) is resolving the relevant TOO survey strategy questions, which are outside the scope of this document\footnote{We note that the realities of the LSST data in this timeframe suggest some constraints on observing strategy:  
 Given the incompleteness of solar system catalogs, TOO observations should ensure two or more observations separated by an interval sufficient to reject main belt asteroids (minimally, 20 minutes, but larger separations would better capture the expected intranight temporal evolution of kilonovae).  
 Since there will be minimal variability history, obtaining near-simultaneous exposures in at least two bands will enable searches for sources with extreme colors.  
-These are consistent with the observing strategies proposed by \citet{2018arXiv181204051M} and \citet{2022ApJS..260...18A}.} and assume that appropriately-developed TOO observations are being triggered.
+These are consistent with the observing strategies proposed by \citet{2018arXiv181204051M} and \citet{2022ApJS..260...18A}.} 
 \citeds{TSTN-035} describes technical handling of TOO triggers by the Rubin scheduler.
 
 This document asks what steps Rubin can take to maximize the scientific value of any GW TOO observations undertaken in the early operations era (defined as the time before DR1, when Data-Release templates are available for all or most of the sky; see \citeds{RTN-011}), with a particular emphasis on data processing, data products, and data availability.
@@ -148,10 +148,10 @@ If TOO observations are expected to be conducted in a subset of LSST's filters, 
 
 \subsection{Conduct bespoke image differencing on-project} \label{sec:processing}
 
-We suggest that the Rubin commissioning and operations teams devote specific effort to custom processing and analysis of TOO observations.
-This processing is necessary for the community to be able to utilize the Rubin observations in a timely manner (\S \ref{sec:constraints}) when pre-existing templates are not available for the fields to be observed (\S \ref{sec:templates}).
+We suggest that the Rubin commissioning and operations teams devote specific effort to custom manual processing and analysis of TOO observations.
+This processing is necessary for the community to be able to utilize the Rubin observations in a timely manner (\S \ref{sec:constraints}): when pre-existing templates are not available for the fields to be observed (\S \ref{sec:templates}), no regular data products will be automatically available.
 
-In this scenario, the Rubin Operations team would undertake a best-effort activity to produce direct image sources, \DIASources,  and \DIAObjects (if possible) for the TOO observations.
+In this scenario, an on-call Rubin team would undertake a best-effort activity to produce direct image sources, \DIASources, and/or \DIAObjects (if possible) for the TOO observations through manual processing of the TOO data.
 The goal would not be to perform scientific analysis\footnote{though team members would not be precluded from doing so later} but to rapidly report reliable results to the community.
 The team would use its judgment to undertake custom processing to enable the rapid identification of plausible counterparts.
 This processing might include image-to-image differencing using prior LSST data, on-the-fly generation of new templates, or various flavors of forced photometry.
@@ -159,7 +159,7 @@ This processing might include image-to-image differencing using prior LSST data,
 While it might be possible to generate functional alert packets to forward to community alert brokers, the team would also likely report results via other channels, in particular the GCN Circulars used by the broader EM/GW community.
 As an extremely time-sensitive, alert-like product these results would be made world-public immediately.
 
-Rubin's TOOs will be highly visible, highly scrutinized observations, and so it will be valuable to have data processing performed by the experienced Rubin operations team under the Rubin imprimatur.
+Rubin's TOOs will be highly visible, highly scrutinized observations, and so it will be valuable to have data processing performed by the experienced Rubin team under the Rubin imprimatur.
 Successful execution of such processing will require a specialized team that will agree to be on-call in case of TOO triggers.
 This team would consist primarily of Rubin personnel but could include members of the commissioning team with relevant expertise (emphasizing again that the purpose of this activity is data processing, not science analysis).
 
@@ -167,7 +167,7 @@ It will be crucial to develop and rehearse procedures in advance to clarify auth
 In developing these procedures it would be useful to consult with the operations of other public facilities conducting EM/GW followup, such as \textit{Swift} and \textit{Fermi}.
 
 During O4 the on-call team should be activated even in cases when templates exist for the TOO observations.
-In this case custom processing might not be required, but the team would perform detailed QA of the alerts produced by the standard pipeline and report any problems with the automated analysis to the community via GCN.
+In this case manual processing might not be required, but the team would perform detailed QA of the alerts produced by the standard pipeline and report any problems with the automated analysis to the community via GCN.
 
 We assume that TOO observations are relatively uncommon in this period (restricted to no more than 1--2 triggers/month, on average, perhaps) such that the impacts on on-call staff are tolerable.  
 
