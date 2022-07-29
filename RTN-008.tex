@@ -80,7 +80,7 @@ There will certainly be other EM followup programs active in the Southern Hemisp
 However, Rubin is capable of making the definitive measurements, delivering high-impact early science along with another major NSF facility in an area of NSF strategic priority\footnote{``Windows on the Universe:'': \url{https://www.nsf.gov/news/special_reports/big_ideas/universe.jsp}}.
 
 One challenge remains: the current timeline for future LIGO/Virgo/KAGRA observing runs (Figure \ref{fig:scenarios}) calls for observing run O4 to overlap only with the Rubin commissioning period\footnote{See \url{https://dmtn-232.lsst.io/top_milestones.html} for current estimates.}.
-In this period prior to the first LSST data release (DR1), alert production will not be running at full volume or full fidelity.
+In this period prior to the first LSST data release (DR1), alert production will not be running at full volume nor full fidelity.
 Moreover, after O4 there will be a long, two-year period of downtime (until 2026+) for upgrades to the GW interferometers.  
 Accordingly, there are high stakes for Rubin GW TOOs in O4 despite the technical challenges they present.
 
@@ -99,7 +99,7 @@ These are consistent with the observing strategies proposed by \citet{2018arXiv1
 
 This document asks what steps Rubin can take to maximize the scientific value of any GW TOO observations undertaken in the early operations era (defined as the time before DR1, when Data-Release templates are available for all or most of the sky; see \citeds{RTN-011}), with a particular emphasis on data processing, data products, and data availability.
 
-LSST alerts are its real-time data product.  
+Alerts are LSST's real-time data product.  
 In the commissioning and early operations era, 
 templates will not available in many areas, and hence standard alert processing cannot be used to disseminate candidates.
 Where LSST templates exist in the area to be covered, standard LSST processing can proceed as normal (subject to the caveats described in \citeds{DMTN-065}), and community alert brokers will provide community access to 60-second latency alerts from the TOO observations.
@@ -131,7 +131,8 @@ We assume that any triggers would be on relatively well-localized GW sources (a 
 Standard alert processing provides the most rapid dissemination of candidate counterparts from TOO observations with the least operational burden, but it requires the existence of template images from prior LSST observations.
 Timely generation of ``incremental'' templates as commissioning and early operations proceed will thus improve the likelihood that a TOO could be processed with standard Alert Produciton.
 %In \citeds{DMTN-107} the DM-SST suggests that incremental template generation in the first year of LSST operations provides the best balance of early template availability and artifact rejection.
-In this scenario new templates are regularly generated throughout the year whenever sufficient imaging becomes available in sky areas and filters without templates \citedsp{RTN-011}.
+In this scenario new templates are regularly generated throughout the year whenever sufficient imaging becomes available in sky areas and filters without templates.  
+Rubin intends to generate templates incrementally from commissioning and early operations data \citedsp{RTN-011}.
 %Having preexisting templates will allow standard alert processing in GW TOO fields, easing the operational impacts of TOO observations.
 
 Additionally, evidence of variability prior to the GW trigger provides one of the most effective ways to rule out unassociated sources in the GW localization region \citep[e.g.,][]{2019GCN.24223....1C, 2019GCN.26430....1S}.
@@ -140,7 +141,7 @@ At LSST depths there will be many unrelated events, and little recent prior imag
 In the steady state survey, LSST's own history will provide substantial filtering: simply selecting \DIAObjects created after the the trigger will exclude most unrelated contaminants.
 In early operations, however, this history will not be available, so not only distant supernovae but also variable stars and AGN will confound efforts to identify plausible GW counterparts.
 
-For this reason it will be very helpful for Rubin to have reliable standard image differencing processing---and hence history---as soon as is practical, providing further impetus for incremental template building.
+For this reason it will be very helpful for Rubin to have reliable standard image differencing processing---and hence history---as soon as is practical, providing further support for the planned incremental template building.
 While custom processing and association could be used to derive this history (\S \ref{sec:processing}) it would require substantial additional effort relative to LSST's standard processing.
 
 If TOO observations are expected to be conducted in a subset of LSST's filters, any observations intended to maximize template coverage could prioritize obtaining images in those bands.
