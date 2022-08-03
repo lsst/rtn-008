@@ -42,7 +42,7 @@ Eric~C.~Bellm
 \setDocChangeRecord{%
   \addtohist{}{2019-12-16}{Initial draft version.}{Eric Bellm}
   \addtohist{}{2020-09-20}{Moved from opstn-002 to rtn-008.}{Leanne Guy}
-  \addtohist{}{2022-08-01}{Revised throughout.}{Eric Bellm}
+  \addtohist{}{2022-08-03}{Revised throughout.}{Eric Bellm}
 }
 
 
@@ -79,7 +79,7 @@ However, as the GW interferometers become more sensitive the GW sources detected
 There will certainly be other EM followup programs active in the Southern Hemisphere, including the new BlackGEM array as well as community programs with DECam.
 However, Rubin is capable of making the definitive measurements, delivering high-impact early science along with another major NSF facility in an area of NSF strategic priority\footnote{``Windows on the Universe:'': \url{https://www.nsf.gov/news/special_reports/big_ideas/universe.jsp}}.
 
-One challenge remains: the current timeline for future LIGO/Virgo/KAGRA observing runs (Figure \ref{fig:scenarios}) calls for observing run O4 to overlap only with the Rubin commissioning period\footnote{See \url{https://dmtn-232.lsst.io/top_milestones.html} for current estimates.}.
+One challenge remains: the current timeline for future LIGO/Virgo/KAGRA observing runs (Figure \ref{fig:scenarios}) calls for only the end of observing run O4 to overlap with the Rubin commissioning period\footnote{See \url{https://www.lsst.org/about/project-status} for current estimates.}.
 In this period prior to the first LSST data release (DR1), alert production will not be running at full volume nor full fidelity.
 Moreover, after O4 there will be a long, two-year period of downtime (until 2026+) for upgrades to the GW interferometers.  
 Accordingly, O4 provides a key opportunity to commission Rubin's TOO capability as well as deliver important early science despite the technical challenges.
@@ -111,7 +111,7 @@ Given the potentially high impact of the science, its visibility in the communit
 Rubin's automated Alert Production relies on coadded templates generated from prior LSST images.  
 Given the early stage of Rubin commissioning during O4, limited on-sky time means it is probable that many LVK triggers will occur in sky areas Rubin has never imaged before.
 Without templates, then, fully automated, survey-grade Alert Production will not be possible. 
-Accordingly, bespoke custom processing will be required in order to generate timely and useful data products.
+Accordingly, custom processing will be required in order to generate timely and useful data products.
 Followup observations in the first 24 hours are among the most critical for identifying EM counterparts and constraining progenitor scenarios. 
 
 Raw and processed LSST images are initially embargoed in both commissioning and operations.
@@ -122,18 +122,12 @@ We assume that any triggers would be on relatively well-localized GW sources (a 
 
 \section{Recommendations}
 
-%If the LSST imaging data is available in a timely manner, users may elect to perform processing beyond standard LSST processing, including differencing against templates from other surveys (e.g., DECaLS), cross-band image differencing to identify sources of extreme color, differencing of nightly stacks, alternative image differencing algorithms, etc.
-
-%The question of data rights is also present here; we assume that by default access to imaging data would continue to be restricted to LSST Users \citedsp{LDO-13}.
-
 \subsection{Conduct incremental template building} \label{sec:templates}
 
 Standard alert processing provides the most rapid dissemination of candidate counterparts from TOO observations with the least operational burden, but it requires the existence of template images from prior LSST observations.
-Timely generation of ``incremental'' templates as commissioning and early operations proceed will thus improve the likelihood that a TOO could be processed with standard Alert Produciton.
-%In \citeds{DMTN-107} the DM-SST suggests that incremental template generation in the first year of LSST operations provides the best balance of early template availability and artifact rejection.
+Timely generation of ``incremental'' templates as commissioning and early operations proceed will thus improve the likelihood that a TOO could be processed with standard Alert Production.
 In this scenario new templates are regularly generated throughout the year whenever sufficient imaging becomes available in sky areas and filters without templates.  
 Rubin intends to generate templates incrementally from commissioning and early operations data \citedsp{RTN-011}.
-%Having preexisting templates will allow standard alert processing in GW TOO fields, easing the operational impacts of TOO observations.
 
 Additionally, evidence of variability prior to the GW trigger provides one of the most effective ways to rule out unassociated sources in the GW localization region \citep[e.g.,][]{2019GCN.24223....1C, 2019GCN.26430....1S}.
 At LSST depths there will be many unrelated events, and little recent prior imaging of sufficient depth from other surveys that can constrain the explosion date.
@@ -170,6 +164,7 @@ During O4 the on-call team should be activated even in cases when templates exis
 In this case manual processing might not be required, but the team would perform detailed QA of the alerts produced by the standard pipeline and report any problems with the automated analysis to the community via GCN.
 
 We assume that TOO observations are relatively uncommon in this period (restricted to no more than 1--2 triggers/month, on average, perhaps) such that the impacts on on-call staff are tolerable.  
+Criteria to trigger during high priority commissioning activities will be worked out with the commissioning team and project management.
 
 
 \appendix
