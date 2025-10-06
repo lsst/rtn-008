@@ -22,14 +22,14 @@
 % Optional subtitle
 % \setDocSubtitle{A subtitle}
 
-\author{%
-Eric~C.~Bellm
-}
+\input{authors}
 
 \setDocRef{RTN-008}
 \setDocUpstreamLocation{\url{https://github.com/rubin-observatory/rtn-008}}
+\setDocDOI{10.71929/rubin/2997564}
 
-\date{\vcsDate}
+% Update if the document has non-trivial revisions.
+\date{2022-08-03}
 
 % Optional: name of the document's curator
 % \setDocCurator{The Curator of this Document}
@@ -62,18 +62,18 @@ Since the watershed discovery of an electromagnetic counterpart to the LIGO/VIRG
 % You can also use the \input command to include several content files.
 \section{Scientific, Technical, and Programmatic Context}
 
-The first binary neutron star merger detected in gravitational waves, GW170817, was detected at the end of observing run O2 \citep{2017PhRvL.119p1101A} along with coincident gamma-rays \citep{2017ApJ...848L..13A}.  
+The first binary neutron star merger detected in gravitational waves, GW170817, was detected at the end of observing run O2 \citep{2017PhRvL.119p1101A} along with coincident gamma-rays \citep{2017ApJ...848L..13A}.
 It was rapidly localized by many groups of electromagnetic (EM) observers \citep{2017ApJ...848L..12A}, enabling an unprecedented followup campaign.
 
 Despite this initial success, intense followup of more than a dozen neutron-star-involved mergers in observing run O3 did not yield a credible electromagnetic counterpart \citep[e.g.,][]{2020ApJ...905..145K, 2022ApJ...927...50R, 2022MNRAS.509.3427D}.
 These results suggested that deeper optical surveys are needed in order to identify EM counterparts to these events \citep[e.g.,][]{2020MNRAS.492..863C, 2021MNRAS.504.1294S}.
 
-Given Rubin's major improvement in depth and survey speed relative to current facilities,  
+Given Rubin's major improvement in depth and survey speed relative to current facilities,
 this scenario raises substantial community and agency expectations for the Rubin Observatory.
 There is little doubt that Rubin can play a central role in identifying significant samples of EM counterparts to GW sources.
 
-Rubin's strengths will become increasingly important in later GW observing runs: 
-as KAGRA and LIGO-India come online, GW spatial localizations will improve to $\sim$tens of square degrees, lessening the need for extremely wide-field instruments to tile major fractions of the sky \citep{2022ApJ...924...54P}.  
+Rubin's strengths will become increasingly important in later GW observing runs:
+as KAGRA and LIGO-India come online, GW spatial localizations will improve to $\sim$tens of square degrees, lessening the need for extremely wide-field instruments to tile major fractions of the sky \citep{2022ApJ...924...54P}.
 However, as the GW interferometers become more sensitive the GW sources detected will be farther away, making already-faint EM counterparts even fainter.
 
 There will certainly be other EM followup programs active in the Southern Hemisphere, including the new BlackGEM array as well as community programs with DECam.
@@ -81,38 +81,38 @@ However, Rubin is capable of making the definitive measurements, delivering high
 
 One challenge remains: the current timeline for future LIGO/Virgo/KAGRA observing runs (Figure \ref{fig:scenarios}) calls for only the end of observing run O4 to overlap with the Rubin commissioning period\footnote{See \url{https://www.lsst.org/about/project-status} for current estimates.}.
 In this period prior to the first LSST data release (DR1), alert production will not be running at full volume nor full fidelity.
-Moreover, after O4 there will be a long, two-year period of downtime (until 2026+) for upgrades to the GW interferometers.  
+Moreover, after O4 there will be a long, two-year period of downtime (until 2026+) for upgrades to the GW interferometers.
 Accordingly, O4 provides a key opportunity to commission Rubin's TOO capability as well as deliver important early science despite the technical challenges.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{figures/LVK_run_plan_220615.png}
-\caption{Projected observing scenarios for LIGO, Virgo, and KAGRA.  Retrieved 2022-07-22 from 
+\caption{Projected observing scenarios for LIGO, Virgo, and KAGRA.  Retrieved 2022-07-22 from
 \url{https://www.ligo.org/scientists/GWEMalerts.php}.
 	\label{fig:scenarios}}
 \end{figure}
 
-The Survey Cadence Optimization Committee (SCOC\footnote{\url{https://www.lsst.org/content/charge-survey-cadence-optimization-committee-scoc}}) is resolving the relevant TOO survey strategy questions, which are outside the scope of this document\footnote{We note that the realities of the LSST data in this timeframe suggest some constraints on observing strategy:  
-Given the incompleteness of solar system catalogs, TOO observations should ensure two or more observations separated by an interval sufficient to reject main belt asteroids (minimally, 20 minutes, but larger separations would better capture the expected intranight temporal evolution of kilonovae).  
-Since there will be minimal variability history, obtaining near-simultaneous exposures in at least two bands will enable searches for sources with extreme colors.  
-These are consistent with the observing strategies proposed by \citet{2018arXiv181204051M} and \citet{2022ApJS..260...18A}.} 
+The Survey Cadence Optimization Committee (SCOC\footnote{\url{https://www.lsst.org/content/charge-survey-cadence-optimization-committee-scoc}}) is resolving the relevant TOO survey strategy questions, which are outside the scope of this document\footnote{We note that the realities of the LSST data in this timeframe suggest some constraints on observing strategy:
+Given the incompleteness of solar system catalogs, TOO observations should ensure two or more observations separated by an interval sufficient to reject main belt asteroids (minimally, 20 minutes, but larger separations would better capture the expected intranight temporal evolution of kilonovae).
+Since there will be minimal variability history, obtaining near-simultaneous exposures in at least two bands will enable searches for sources with extreme colors.
+These are consistent with the observing strategies proposed by \citet{2018arXiv181204051M} and \citet{2022ApJS..260...18A}.}
 \citeds{TSTN-035} describes technical handling of TOO triggers by the Rubin scheduler.
 
 This document asks what steps Rubin can take to maximize the scientific value of any GW TOO observations undertaken in the early operations era (defined as the time before DR1, when Data-Release templates are available for all or most of the sky; see \citeds{RTN-011}), with a particular emphasis on data processing, data products, and data availability.
 
-Alerts are LSST's real-time data product.  
-In the commissioning and early operations era, 
+Alerts are LSST's real-time data product.
+In the commissioning and early operations era,
 templates will not be available in many areas, and hence standard alert processing cannot be used to disseminate candidates.
 Where LSST templates exist in the area to be covered, standard LSST processing can proceed as normal (subject to the caveats described in \citeds{DMTN-065}), and community alert brokers will provide community access to 60-second latency alerts from the TOO observations.
 
-Given the potentially high impact of the science, its visibility in the community, and importance to the NSF, we suggest that the project plan for special handling of GW TOO observations in the commissioning and early operations era.  
+Given the potentially high impact of the science, its visibility in the community, and importance to the NSF, we suggest that the project plan for special handling of GW TOO observations in the commissioning and early operations era.
 
 \section{Constraints} \label{sec:constraints}
 
-Rubin's automated Alert Production relies on coadded templates generated from prior LSST images.  
+Rubin's automated Alert Production relies on coadded templates generated from prior LSST images.
 Given the early stage of Rubin commissioning during O4, limited on-sky time means it is probable that many LVK triggers will occur in sky areas Rubin has never imaged before.
-Without templates, then, fully automated, survey-grade Alert Production will not be possible. 
+Without templates, then, fully automated, survey-grade Alert Production will not be possible.
 Accordingly, custom processing will be required in order to generate timely and useful data products.
-Followup observations in the first 24 hours are among the most critical for identifying EM counterparts and constraining progenitor scenarios. 
+Followup observations in the first 24 hours are among the most critical for identifying EM counterparts and constraining progenitor scenarios.
 
 Raw and processed LSST images are initially embargoed in both commissioning and operations.
 This precludes simply releasing the TOO images for community processing.
@@ -126,7 +126,7 @@ We assume that any triggers would be on relatively well-localized GW sources (a 
 
 Standard alert processing provides the most rapid dissemination of candidate counterparts from TOO observations with the least operational burden, but it requires the existence of template images from prior LSST observations.
 Timely generation of ``incremental'' templates as commissioning and early operations proceed will thus improve the likelihood that a TOO could be processed with standard Alert Production.
-In this scenario new templates are regularly generated throughout the year whenever sufficient imaging becomes available in sky areas and filters without templates.  
+In this scenario new templates are regularly generated throughout the year whenever sufficient imaging becomes available in sky areas and filters without templates.
 Rubin intends to generate templates incrementally from commissioning and early operations data \citedsp{RTN-011}.
 
 Additionally, evidence of variability prior to the GW trigger provides one of the most effective ways to rule out unassociated sources in the GW localization region \citep[e.g.,][]{2019GCN.24223....1C, 2019GCN.26430....1S}.
@@ -157,13 +157,13 @@ Rubin's TOOs will be highly visible, highly scrutinized observations, and so it 
 Successful execution of such processing will require a specialized team that will agree to be on-call in case of TOO triggers.
 This team would consist primarily of Rubin personnel but could include members of the commissioning team with relevant expertise (emphasizing again that the purpose of this activity is data processing, not science analysis).
 
-It will be crucial to develop and rehearse procedures in advance to clarify authority, responsibility, and communications channels. 
+It will be crucial to develop and rehearse procedures in advance to clarify authority, responsibility, and communications channels.
 In developing these procedures it would be useful to consult with the operations of other public facilities conducting EM/GW followup, such as \textit{Swift} and \textit{Fermi}.
 
 During O4 the on-call team should be activated even in cases when templates exist for the TOO observations.
 In this case manual processing might not be required, but the team would perform detailed QA of the alerts produced by the standard pipeline and report any problems with the automated analysis to the community via GCN.
 
-We assume that TOO observations are relatively uncommon in this period (restricted to no more than 1--2 triggers/month, on average, perhaps) such that the impacts on on-call staff are tolerable.  
+We assume that TOO observations are relatively uncommon in this period (restricted to no more than 1--2 triggers/month, on average, perhaps) such that the impacts on on-call staff are tolerable.
 Criteria to trigger during high priority commissioning activities will be worked out with the commissioning team and project management.
 
 
